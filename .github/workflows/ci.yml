@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Clean dependency install
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Security auditing
         run: npm audit --audit-level=high
         continue-on-error: true # risk note
